@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - Your Cooking Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand" onclick="location.href='index.html'" role="button">
+        <span class="logo">🍳</span>
+        <div class="brand-title">
+          <h1>Your Cooking Shop</h1>
+          <small>Cookbooks & digital recipes</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Form -->
+  <main class="auth-page">
+    <div class="auth-container">
+      <h2>Login</h2>
+
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" placeholder="Enter your email" required>
+
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" placeholder="Enter your password" required>
+
+      <button class="btn primary" id="login-btn">Login</button>
+
+      <p class="auth-links">
+        <a href="#" id="forgot-password">Forgot Password?</a>
+      </p>
+
+      <p>Don’t have an account? <a href="signup.html">Sign up</a></p>
+
+      <p id="auth-message" class="auth-message"></p>
+    </div>
+  </main>
+
+  <script src="auth.js" type="module" defer></script>
+</body>
+</html>

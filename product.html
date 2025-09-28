@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Product — Your Cooking Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav small">
+  <div class="container nav-inner">
+    <div class="brand" onclick="location.href='index.html'">
+      <span class="logo">🍳</span>
+      <div class="brand-title">
+        <h1>Your Cooking Shop</h1>
+      </div>
+    </div>
+    <nav class="nav-actions">
+      <a class="btn ghost" href="index.html">← Back</a>
+      <a class="btn" id="nav-cart-2" href="cart.html">🛒 Cart <span id="nav-cart-count-2">0</span></a>
+
+      <span id="welcome-text" class="welcome-text"></span>
+      <a class="btn ghost" id="nav-signup" href="signup.html">Sign up</a>
+      <a class="btn ghost" id="nav-login" href="login.html">Login</a>
+
+      <div class="profile-dropdown" id="profile-dropdown" style="display:none;">
+        <button class="btn ghost" id="profile-btn">👤 <span id="profile-name">User</span> ▼</button>
+        <div class="dropdown-menu" id="profile-menu">
+          <button id="profile-change-password">Change Password</button>
+          <button id="profile-delete-account">Delete Account</button>
+          <button id="profile-logout">Logout</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container product-page" id="product-container"></main>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAeWT-TYbQoLbIotXRJFadYpCYhg5dwQx8",
+    authDomain: "digitalcookbook-4e267.firebaseapp.com",
+    projectId: "digitalcookbook-4e267",
+    storageBucket: "digitalcookbook-4e267.firebasestorage.app",
+    messagingSenderId: "473767352175",
+    appId: "1:473767352175:web:17272117842f936f273a9a"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  const navSignup = document.getElementById('nav-signup');
+  const navLogin = document.getElementById('nav-login');
+  const profileDropdown = document.getElementById('profile-dropdown');
+  const profileBtn = document.getElementById('profile-btn');
+  const profileMenu = document.getElementById('profile-menu');
+  const profileLogout = document.getElementById('profile-logout');
+  const welcomeText = document.getElementById('welcome-text');
+
+  function showLoggedInUI(user) {
+    if(navSignup) navSignup.style.display = 'none';
+    if(navLogin) navLogin.style.display = 'none';
+    if(profileDropdown) profileDropdown.style.display = 'inline-flex';
+    if(profileBtn) profileBtn.textContent = `👤 ${user.email} ▼`;
+    if(welcomeText) welcomeText.textContent = '';
+
+    profileBtn?.addEventListener('click', e => {
+      e.stopPropagation();
+      profileMenu.style.display = profileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', e => {
+      if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+        profileMenu.style.display = 'none';
+      }
+    });
+  }
+
+  function showLoggedOutUI() {
+    if(navSignup) navSignup.style.display = 'inline-flex';
+    if(navLogin) navLogin.style.display = 'inline-flex';
+    if(profileDropdown) profileDropdown.style.display = 'none';
+    if(welcomeText) welcomeText.textContent = '';
+  }
+
+  profileLogout?.addEventListener('click', async () => {
+    await signOut(auth);
+    showLoggedOutUI();
+    alert('Logged out');
+  });
+
+  auth.onAuthStateChanged(user => {
+    if(user) showLoggedInUI(user);
+    else showLoggedOutUI();
+  });
+</script>
+
+<script src="shop.js" defer></script>
+<script src="auth.js" defer></script>
+</body>
+</html>

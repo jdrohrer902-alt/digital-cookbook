@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up - Your Cooking Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand" onclick="location.href='index.html'" role="button">
+        <span class="logo">🍳</span>
+        <div class="brand-title">
+          <h1>Your Cooking Shop</h1>
+          <small>Cookbooks & digital recipes</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-container">
+      <h2>Create Account</h2>
+
+      <label for="signup-email">Email</label>
+      <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" placeholder="Create a password" required>
+
+      <button class="btn primary" id="signup-btn">Sign Up</button>
+
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </main>
+
+  <script src="auth.js" type="module" defer></script>
+</body>
+</html>

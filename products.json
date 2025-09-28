@@ -1,0 +1,19 @@
+[
+  {"id":1,"title":"The Family Feast Cookbook","description":"Heartwarming family recipes everyone will love.","price":19.99,"image":"images/family-feast.jpg","pdf":"pdfs/family-feast.pdf","category":"Family","rating":4.7},
+  {"id":2,"title":"Healthy Kids Cookbook","description":"Fun and nutritious recipes for picky eaters.","price":16.99,"image":"images/healthy-kids.jpg","pdf":"pdfs/healthy-kids.pdf","category":"Family","rating":4.5},
+  {"id":3,"title":"Sunday Dinner Favorites","description":"Classic Sunday dinners that bring the family together.","price":21.99,"image":"images/sunday-dinner.jpg","pdf":"pdfs/sunday-dinner.pdf","category":"Family","rating":4.6},
+  {"id":4,"title":"Family Breakfast Recipes","description":"Start the day right with easy breakfast ideas for all ages.","price":17.99,"image":"images/family-breakfast.jpg","pdf":"pdfs/family-breakfast.pdf","category":"Family","rating":4.4},
+  {"id":5,"title":"Holiday Feast Cookbook","description":"Festive recipes for Christmas, Thanksgiving, and more.","price":25.99,"image":"images/holiday-feast.jpg","pdf":"pdfs/holiday-feast.pdf","category":"Family","rating":4.8},
+
+  {"id":6,"title":"Quick Meals Cookbook","description":"Easy recipes ready in under 30 minutes.","price":14.99,"image":"images/quick-meals.jpg","pdf":"pdfs/quick-meals.pdf","category":"Quick & Easy","rating":4.3},
+  {"id":7,"title":"5-Ingredient Recipes","description":"Simple dishes with only 5 ingredients.","price":12.99,"image":"images/5-ingredients.jpg","pdf":"pdfs/5-ingredients.pdf","category":"Quick & Easy","rating":4.1},
+  {"id":8,"title":"30-Minute Dinners","description":"Dinner ideas you can make in 30 minutes or less.","price":15.99,"image":"images/30-minute-dinners.jpg","pdf":"pdfs/30-minute-dinners.pdf","category":"Quick & Easy","rating":4.2},
+  {"id":9,"title":"Lunchbox Ideas","description":"Quick and healthy lunches for school or work.","price":13.99,"image":"images/lunchbox-ideas.jpg","pdf":"pdfs/lunchbox-ideas.pdf","category":"Quick & Easy","rating":4.0},
+  {"id":10,"title":"Quick Vegetarian Meals","description":"Tasty vegetarian meals ready in 30 minutes.","price":16.99,"image":"images/quick-vegetarian.jpg","pdf":"pdfs/quick-vegetarian.pdf","category":"Quick & Easy","rating":4.4},
+  {"id":11,"title":"Instant Pot Magic","description":"Delicious and fast recipes using your Instant Pot.","price":19.99,"image":"images/instant-pot.jpg","pdf":"pdfs/instant-pot.pdf","category":"Quick & Easy","rating":4.5},
+
+  {"id":12,"title":"Gourmet Dinners Cookbook","description":"Sophisticated recipes for impressing guests.","price":29.99,"image":"images/gourmet-dinners.jpg","pdf":"pdfs/gourmet-dinners.pdf","category":"Gourmet","rating":4.6},
+  {"id":13,"title":"Vegetarian Delights","description":"Delicious vegetarian recipes for everyday meals.","price":18.99,"image":"images/vegetarian-delights.jpg","pdf":"pdfs/vegetarian-delights.pdf","category":"Gourmet","rating":4.4},
+  {"id":14,"title":"Decadent Desserts","description":"Luxury desserts that taste like they came from a bakery.","price":22.99,"image":"images/decadent-desserts.jpg","pdf":"pdfs/decadent-desserts.pdf","category":"Gourmet","rating":4.7},
+  {"id":15,"title":"Seafood Gourmet","description":"Impress your guests with gourmet seafood dishes.","price":27.99,"image":"images/seafood-gourmet.jpg","pdf":"pdfs/seafood-gourmet.pdf","category":"Gourmet","rating":4.5}
+]

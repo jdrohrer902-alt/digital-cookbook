@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Cooking Shop</title>
+  <meta name="description" content="Modern digital cookbook store" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand" onclick="location.href='index.html'" role="button">
+        <span class="logo">🍳</span>
+        <div class="brand-title">
+          <h1>Your Cooking Shop</h1>
+          <small>Cookbooks & digital recipes</small>
+        </div>
+      </div>
+
+      <div class="nav-search">
+        <input id="search" placeholder="Search cookbooks, recipes, keywords..." aria-label="Search">
+      </div>
+
+      <nav class="nav-actions">
+        <span id="welcome-text" class="welcome-text"></span>
+
+        <!-- Login/Signup buttons -->
+        <a class="btn ghost" id="nav-signup" href="signup.html">Sign up</a>
+        <a class="btn ghost" id="nav-login" href="login.html">Login</a>
+
+        <!-- Profile Dropdown -->
+        <div class="profile-dropdown" id="profile-dropdown" style="display:none;">
+          <button class="btn ghost" id="profile-btn">👤 <span id="profile-name">User</span> ▼</button>
+          <div class="dropdown-menu" id="profile-menu">
+            <button id="profile-delete-account">Delete Account</button>
+            <button id="profile-logout">Logout</button>
+          </div>
+        </div>
+
+        <a class="btn" id="nav-cart" href="cart.html" aria-label="Cart">🛒 Cart <span id="nav-cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h2>Beautiful cookbooks for modern kitchens</h2>
+        <p>Family favorites, 30-minute meals, and gourmet recipes — all downloadable as PDFs.</p>
+        <div class="hero-cta">
+          <button class="btn primary" id="explore-btn">Explore Catalog</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="images/holiday-feast.jpg" alt="Hero cookbook" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls container">
+      <div class="filters" role="toolbar" aria-label="Categories">
+        <button class="chip active" data-cat="All">All</button>
+        <button class="chip" data-cat="Family">Family</button>
+        <button class="chip" data-cat="Quick & Easy">Quick & Easy</button>
+        <button class="chip" data-cat="Gourmet">Gourmet</button>
+      </div>
+      <div class="controls-right">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price ↑</option>
+          <option value="price-desc">Price ↓</option>
+          <option value="rating-desc">Top Rated</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products container" id="products-grid" aria-live="polite"></section>
+
+    <!-- Recommended -->
+    <section id="recommended-section"></section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Your Cooking Shop</strong>
+        <p>Digital cookbooks crafted with love.</p>
+      </div>
+      <div>
+        <strong>Links</strong>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="signup.html">Sign up</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p>hello@cookingshop.example</p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Your Cooking Shop</div>
+  </footer>
+
+  <!-- Main Shop JS -->
+  <script type="module" src="shop.js"></script>
+
+  <!-- Firebase Auth -->
+<script src="auth.js" type="module" defer></script>
+
+</body>
+</html>
